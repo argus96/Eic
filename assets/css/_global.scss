@@ -1,0 +1,19 @@
+.global-heading{
+    padding-top: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    h2{
+        font-family: $pop;
+        font-weight: 700;
+        text-transform: capitalize;
+        span{
+            color: $color-orange;
+        }
+    }
+    p{
+        text-transform: capitalize;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+}
+

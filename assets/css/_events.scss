@@ -1,0 +1,15 @@
+#calender-wrapper{
+    margin-bottom: 3rem;
+    summary{
+        color: $color-orange;
+        text-transform: capitalize;
+        font-size: 28px;
+        margin-bottom: 3rem;    
+    }
+    #calendar{
+        padding: 2rem 1.5rem 3rem;
+        border: 2px solid $color-blue;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}

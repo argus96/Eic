@@ -1,0 +1,160 @@
+#history {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: $background;
+    .history-top {
+        h2 {
+            text-transform: uppercase;
+            color: $color-orange;
+            font-family: $lora;
+            font-family: 700;
+            font-size: 50px;
+            span {
+                color: $color-black;
+            }
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    .history-end {
+        margin-top: 2rem;
+        .history-heading {
+            margin-top: 3rem;
+            padding-left: 1rem;
+            h1 {
+                font-size: 32px;
+                text-transform: capitalize;
+                font-weight: 700;
+                font-family: $play;
+                position: relative;
+                color: $color-orange;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 2%;
+                    height: 95px;
+                    background: $color-orange;
+                    left: -15px;
+                    bottom: -10px;
+                }
+            }
+            i {
+                color: $color-orange;
+                font-size: 24px;
+            }
+        }
+        .history-desc {
+            margin-top: 3rem;
+            p {
+                padding-left: 0.5rem;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 2.5px;
+                    height: 215px;
+                    left: -10px;
+                    background: $color-black;
+                }
+            }
+        }
+    }
+}
+
+#team {
+    padding-bottom: 3rem;
+    background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 1rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .team-card {
+        background: $form-bg-color;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 0.8s ease forwards;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-image {
+            position: relative;
+            overflow: hidden;
+            height: 50vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+        }
+
+        .team-content {
+            padding: 1.5rem;
+            text-align: center;
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color:$color-black;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 1rem;
+                color: $text-color;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

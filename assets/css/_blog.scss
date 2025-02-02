@@ -1,0 +1,125 @@
+#blog-wrapper {
+    background: $background;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .blog-heading {
+        text-align: center;
+        background: $background;
+        h2 {
+            font-size: 55px;
+            color: $color-black;
+        }
+        p {
+            font-size: 16px;
+            opacity: 0.7;
+            &::after {
+                content: " ";
+                display: block;
+                height: 1px;
+                width: 100%;
+                margin-top: 2rem;
+                opacity: 0.7;
+                background: $color-black;
+            }
+        }
+    }
+    .top-blog {
+        h2 {
+            text-transform: capitalize;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+        .blog-top-image {
+            margin-top: 2rem;
+            img {
+                width: 100%;
+                height: 50vh;
+                border-radius: 12px;
+                border: 2px solid $color-white;
+                object-fit: cover;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            }
+        }
+        .top-blog-box {
+            margin-top: 2rem;
+            background: $form-bg-color;
+            padding: 1rem 1.5rem;
+            border: 1px solid $color-black;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+            h2 {
+                font-size: 30px;
+                color: $color-black;
+            }
+            .btn-box {
+                margin-top: 2rem;
+                .btn {
+                    padding: 0.5rem 1.5rem;
+                    border: 1px solid $color-black;
+                    text-transform: capitalize;
+                    &:hover {
+                        color: $text-color;
+                        background: $color-orange;
+                    }
+                }
+            }
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0.5px;
+            opacity: 0.7;
+            margin-top: 2rem;
+            background: $color-black;
+        }
+    }
+    .end-blog {
+        margin-top: 2rem;
+        h2 {
+            text-transform: capitalize;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+        .end-blog-box {
+            margin-top: 2rem;
+            .image {
+                img {
+                    width: 100%;
+                    height: 50vh;
+                    // border-radius: 25px;
+                    object-fit: cover;
+                }
+            }
+            .box-desc {
+                background: $form-bg-color;
+                margin-top: 1rem;
+                padding: 1rem 1.5rem;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+                span {
+                    font-size: 16px;
+                    opacity: 0.7;
+                }
+                h2{
+                    color: $color-black;
+                    font-size: 28px;
+                }
+                .btn-box{
+                    .btn{
+                        padding: .5rem 1.5rem;
+                        border: 1px solid $color-black;
+                        text-transform: capitalize;
+                        border-radius: 10;
+                        &:hover{
+                            background: $color-orange;
+                            color: $text-color;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

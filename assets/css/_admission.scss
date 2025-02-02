@@ -1,0 +1,223 @@
+.admission-process {
+    padding-top: 3rem;
+
+    h2 {
+        color: $color-orange;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        font-family: $lora;
+        font-weight: 700;
+    }
+
+    ol {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        li {
+            background-color: $background;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background-color: $color-orange;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+
+                &::before {
+                    transform: scaleX(1);
+                }
+            }
+
+            span {
+                display: block;
+                font-size: 24px;
+                font-weight: bold;
+                color: $color-orange;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+#admission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+    padding: 50px 0;
+    
+    .admission-form {  
+        background: $color-white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: $color-orange;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    color: $color-black;
+                }
+
+                input,
+                select,
+                textarea {
+                    padding: 10px;
+                    border: 1px solid $primary-orange;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    transition: all 0.3s ease-in-out;
+
+                    &:focus {
+                        border-color: $color-orange;
+                        outline: none;
+                        box-shadow: 0 0 5px rgba(183, 117, 17, 0.5);
+                    }
+                }
+            }
+
+            .submit-btn {
+                background: $color-orange;
+                color: $color-white;
+                border: none;
+                padding: 12px;
+                font-size: 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background: darken($color-orange, 10%);
+                }
+            }
+        }
+    }
+    .admission-image{
+        img{
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #admission {
+        padding: 20px;
+
+        .admission-form {
+            padding: 20px;
+        }
+    }
+}
+
+.fee {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .fee-box {
+        border: 2px solid $color-orange;
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+        box-shadow:0px 4px 10px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            color: $color-orange;
+            text-align: center;
+            font-family: $lora;
+        }
+
+        .fee-table {
+            overflow-x: auto;
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+
+                th,
+                td {
+                    padding: 12px;
+                    text-align: left;
+                    border-bottom: 1px solid $color-white;
+                }
+
+                th {
+                    background: $color-orange;
+                    color: $color-white;
+                }
+
+                tr:nth-child(even) {
+                    background: $background;
+                }
+            }
+        }
+
+        .scholarship-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: $color-orange;
+            border-radius: 10px;
+            h3 {
+                color: $color-white;
+                font-family: $pop;
+                font-weight: 700;
+                text-align: center;
+            }
+            ul {
+                padding-left: 20px;
+
+                li {
+                    color: $color-black;
+                    strong {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
